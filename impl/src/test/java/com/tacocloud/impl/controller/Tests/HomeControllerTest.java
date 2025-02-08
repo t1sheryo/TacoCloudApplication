@@ -1,4 +1,4 @@
-package com.tacocloud.impl.controller.tests;
+package com.tacocloud.impl.controller.Tests;
 
 import com.tacocloud.impl.controller.HomeController;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +11,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 import static org.hamcrest.Matchers.containsString;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-@WebMvcTest(HomeController.class)
+@WebMvcTest
 public class HomeControllerTest {
     @Autowired
     private MockMvc mockMvc;
