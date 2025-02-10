@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: impl
+  datasource:
+    generate-unique-name: false
+    name: tacocloud
