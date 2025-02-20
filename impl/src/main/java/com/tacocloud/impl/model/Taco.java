@@ -1,5 +1,6 @@
 package com.tacocloud.impl.model;
 
+import com.tacocloud.impl.model.helper.IngredientRef;
 import lombok.Data;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
@@ -17,5 +18,5 @@ public class Taco {
 
     @NotNull
     @Size(min = 1, message = "Taco must have at least 1 ingredient")
-    private List<Ingredient> ingredients;
+    private List<IngredientRef> ingredients;
 }

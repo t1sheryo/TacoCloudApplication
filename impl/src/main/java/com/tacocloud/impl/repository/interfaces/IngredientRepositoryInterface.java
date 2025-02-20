@@ -1,4 +1,4 @@
-package com.tacocloud.impl.repository;
+package com.tacocloud.impl.repository.interfaces;
 
 import com.tacocloud.impl.model.Ingredient;
 

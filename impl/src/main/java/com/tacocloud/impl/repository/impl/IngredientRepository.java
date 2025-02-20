@@ -1,7 +1,8 @@
-package com.tacocloud.impl.repository;
+package com.tacocloud.impl.repository.impl;
 
 import com.tacocloud.impl.enums.Type;
 import com.tacocloud.impl.model.Ingredient;
+import com.tacocloud.impl.repository.interfaces.IngredientRepositoryInterface;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -11,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class JdbcIngredientRepository implements IngredientRepositoryInterface {
+public class IngredientRepository implements IngredientRepositoryInterface {
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
-    public JdbcIngredientRepository(JdbcTemplate jdbcTemplate) {
+    public IngredientRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
     @Override

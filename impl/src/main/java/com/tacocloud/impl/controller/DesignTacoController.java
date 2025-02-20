@@ -4,7 +4,7 @@ import com.tacocloud.impl.enums.Type;
 import com.tacocloud.impl.model.Ingredient;
 import com.tacocloud.impl.model.Taco;
 import com.tacocloud.impl.model.TacoOrder;
-import com.tacocloud.impl.repository.JdbcIngredientRepository;
+import com.tacocloud.impl.repository.impl.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,7 +12,7 @@ import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.ui.Model;
 import jakarta.validation.Valid;
-import java.util.Arrays;
+
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
@@ -22,10 +22,10 @@ import java.util.stream.StreamSupport;
 @RequestMapping("/design")
 @SessionAttributes("tacoOrder")
 public class DesignTacoController {
-    private final JdbcIngredientRepository ingredientRepository;
+    private final IngredientRepository ingredientRepository;
 
     @Autowired
-    public DesignTacoController(JdbcIngredientRepository ingredientRepository) {
+    public DesignTacoController(IngredientRepository ingredientRepository) {
         this.ingredientRepository = ingredientRepository;
     }
 
