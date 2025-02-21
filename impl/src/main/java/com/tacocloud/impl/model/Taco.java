@@ -4,12 +4,16 @@ import com.tacocloud.impl.model.helper.IngredientRef;
 import lombok.Data;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
 
 import java.util.Date;
 import java.util.List;
 
 @Data
+@Table
 public class Taco {
+    @Id
     private long id;
     private Date createdAt = new Date();
     @NotNull
