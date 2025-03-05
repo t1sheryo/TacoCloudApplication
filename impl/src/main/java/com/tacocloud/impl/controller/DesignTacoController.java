@@ -4,6 +4,7 @@ import com.tacocloud.impl.enums.Type;
 import com.tacocloud.impl.model.Ingredient;
 import com.tacocloud.impl.model.Taco;
 import com.tacocloud.impl.model.TacoOrder;
+import com.tacocloud.impl.model.helper.TacoUDRUtils;
 import com.tacocloud.impl.repository.interfaces.IngredientRepository;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -68,7 +69,7 @@ public class DesignTacoController {
             return "design";
         }
 
-        tacoOrder.addTaco(taco);
+        tacoOrder.addTaco(TacoUDRUtils.toTacoUDT(taco));
         log.info("Processing taco: {}", taco);
         return "redirect:/orders/current";
     }
