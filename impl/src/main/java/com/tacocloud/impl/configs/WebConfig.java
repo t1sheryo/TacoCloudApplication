@@ -1,4 +1,4 @@
-package com.tacocloud.impl.controller;
+package com.tacocloud.impl.configs;
 
 import com.tacocloud.impl.enums.Type;
 import com.tacocloud.impl.model.Ingredient;
@@ -29,6 +29,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/").setViewName("home");
+        registry.addViewController("/login");
     }
-    }
-
+}

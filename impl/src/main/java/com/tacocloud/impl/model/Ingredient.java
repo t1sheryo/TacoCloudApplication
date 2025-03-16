@@ -14,9 +14,9 @@ import org.springframework.data.cassandra.core.mapping.Table;
 @NoArgsConstructor(access= AccessLevel.PRIVATE, force=true)
 public class Ingredient{
     @PrimaryKey
-    private final String id;
+    private String id;
 
-    private final String name;
+    private String name;
 
-    private final Type type;
+    private Type type;
 }
